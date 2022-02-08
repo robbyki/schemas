@@ -1,6 +1,5 @@
 {
   "description": "RoleRef contains information that points to the role being used",
-  "type": "object",
   "required": [
     "apiGroup",
     "kind",
@@ -29,5 +28,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

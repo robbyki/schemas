@@ -1,6 +1,5 @@
 {
-  "description": "ImageStreamTag represents an Image that is retrieved by tag name from an ImageStream. Use this resource to interact with the tags and images in an image stream by tag, or to see the image details for a particular tag. The image associated with this resource is the most recently successfully tagged, imported, or pushed image (as described in the image stream status.tags.items list for this tag). If an import is in progress or has failed the previous image will be shown. Deleting an image stream tag clears both the status and spec fields of an image stream. If no image can be retrieved for a given tag, a not found error will be returned.",
-  "type": "object",
+  "description": "ImageStreamTag represents an Image that is retrieved by tag name from an ImageStream.",
   "required": [
     "tag",
     "generation",
@@ -9,7 +8,7 @@
   ],
   "properties": {
     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
       "type": [
         "string",
         "null"
@@ -26,7 +25,7 @@
         "null"
       ],
       "items": {
-        "$ref": "_definitions.json#/definitions/com.github.openshift.api.image.v1.TagEventCondition"
+        "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.image.v1.TagEventCondition"
       }
     },
     "generation": {
@@ -39,10 +38,10 @@
     },
     "image": {
       "description": "image associated with the ImageStream and tag.",
-      "$ref": "_definitions.json#/definitions/com.github.openshift.api.image.v1.Image"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.image.v1.Image"
     },
     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
       "type": [
         "string",
         "null"
@@ -53,14 +52,15 @@
     },
     "lookupPolicy": {
       "description": "lookupPolicy indicates whether this tag will handle image references in this namespace.",
-      "$ref": "_definitions.json#/definitions/com.github.openshift.api.image.v1.ImageLookupPolicy"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.image.v1.ImageLookupPolicy"
     },
     "metadata": {
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+      "description": "Standard object's metadata.",
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
     },
     "tag": {
       "description": "tag is the spec tag associated with this image stream tag, and it may be null if only pushes have occurred to this image stream.",
-      "$ref": "_definitions.json#/definitions/com.github.openshift.api.image.v1.TagReference"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.image.v1.TagReference"
     }
   },
   "x-kubernetes-group-version-kind": [
@@ -75,5 +75,6 @@
       "version": "v1"
     }
   ],
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

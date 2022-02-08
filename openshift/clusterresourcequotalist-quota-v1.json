@@ -1,31 +1,32 @@
 {
-  "description": "ClusterResourceQuotaList is a list of ClusterResourceQuota",
+  "description": "ClusterResourceQuotaList is a collection of ClusterResourceQuotas",
   "required": [
     "items"
   ],
   "properties": {
     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
       "type": [
         "string",
         "null"
       ],
       "enum": [
+        "v1",
         "quota.openshift.io/v1"
       ]
     },
     "items": {
-      "description": "List of clusterresourcequotas. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md",
+      "description": "Items is a list of ClusterResourceQuotas",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "_definitions.json#/definitions/io.openshift.quota.v1.ClusterResourceQuota"
+        "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.quota.v1.ClusterResourceQuota"
       }
     },
     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
       "type": [
         "string",
         "null"
@@ -35,11 +36,16 @@
       ]
     },
     "metadata": {
-      "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
+      "description": "Standard object's metadata.",
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
     }
   },
   "x-kubernetes-group-version-kind": [
+    {
+      "group": "",
+      "kind": "ClusterResourceQuotaList",
+      "version": "v1"
+    },
     {
       "group": "quota.openshift.io",
       "kind": "ClusterResourceQuotaList",

@@ -1,6 +1,5 @@
 {
   "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
-  "type": "object",
   "required": [
     "verbs"
   ],
@@ -71,5 +70,6 @@
       }
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

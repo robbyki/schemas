@@ -1,6 +1,5 @@
 {
   "description": "APIServiceStatus contains derived information about an API server",
-  "type": "object",
   "properties": {
     "conditions": {
       "description": "Current service state of apiService.",
@@ -9,15 +8,12 @@
         "null"
       ],
       "items": {
-        "$ref": "_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceCondition"
+        "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceCondition"
       },
-      "x-kubernetes-list-map-keys": [
-        "type"
-      ],
-      "x-kubernetes-list-type": "map",
       "x-kubernetes-patch-merge-key": "type",
       "x-kubernetes-patch-strategy": "merge"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

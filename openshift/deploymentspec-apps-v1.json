@@ -1,6 +1,5 @@
 {
   "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
-  "type": "object",
   "required": [
     "selector",
     "template"
@@ -47,17 +46,17 @@
     },
     "selector": {
       "description": "Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template's labels.",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
     },
     "strategy": {
       "description": "The deployment strategy to use to replace existing pods with new ones.",
-      "x-kubernetes-patch-strategy": "retainKeys",
-      "$ref": "_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentStrategy"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentStrategy"
     },
     "template": {
       "description": "Template describes the pods that will be created.",
-      "$ref": "_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

@@ -1,6 +1,4 @@
 {
-  "description": "APIServiceCondition describes the state of an APIService at a particular point",
-  "type": "object",
   "required": [
     "type",
     "status"
@@ -8,7 +6,7 @@
   "properties": {
     "lastTransitionTime": {
       "description": "Last time the condition transitioned from one status to another.",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
     },
     "message": {
       "description": "Human-readable message indicating details about last transition.",
@@ -39,5 +37,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

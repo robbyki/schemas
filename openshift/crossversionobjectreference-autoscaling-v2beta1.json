@@ -1,6 +1,5 @@
 {
   "description": "CrossVersionObjectReference contains enough information to let you identify the referred resource.",
-  "type": "object",
   "required": [
     "kind",
     "name"
@@ -14,7 +13,7 @@
       ]
     },
     "kind": {
-      "description": "Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds\"",
+      "description": "Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds\"",
       "type": [
         "string",
         "null"
@@ -28,5 +27,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

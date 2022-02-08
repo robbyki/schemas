@@ -1,6 +1,5 @@
 {
   "description": "current status of a horizontal pod autoscaler",
-  "type": "object",
   "required": [
     "currentReplicas",
     "desiredReplicas"
@@ -32,7 +31,7 @@
     },
     "lastScaleTime": {
       "description": "last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
     },
     "observedGeneration": {
       "description": "most recent generation observed by this autoscaler.",
@@ -43,5 +42,6 @@
       "format": "int64"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

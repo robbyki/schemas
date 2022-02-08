@@ -1,6 +1,5 @@
 {
   "description": "ScaleSpec describes the attributes of a scale subresource.",
-  "type": "object",
   "properties": {
     "replicas": {
       "description": "desired number of instances for the scaled object.",
@@ -11,5 +10,6 @@
       "format": "int32"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

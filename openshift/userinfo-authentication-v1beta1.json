@@ -1,6 +1,5 @@
 {
   "description": "UserInfo holds the information about the user needed to implement the user.Info interface.",
-  "type": "object",
   "properties": {
     "extra": {
       "description": "Any additional information provided by the authenticator.",
@@ -49,5 +48,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

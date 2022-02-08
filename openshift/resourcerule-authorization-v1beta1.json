@@ -1,6 +1,5 @@
 {
   "description": "ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.",
-  "type": "object",
   "required": [
     "verbs"
   ],
@@ -58,5 +57,6 @@
       }
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

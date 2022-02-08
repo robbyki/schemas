@@ -1,31 +1,31 @@
 {
-  "description": "RangeAllocationList is a list of RangeAllocation",
+  "description": "RangeAllocationList is a list of RangeAllocations objects",
   "required": [
     "items"
   ],
   "properties": {
     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
       "type": [
         "string",
         "null"
       ],
       "enum": [
-        "security.internal.openshift.io/v1"
+        "security.openshift.io/v1"
       ]
     },
     "items": {
-      "description": "List of rangeallocations. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md",
+      "description": "List of RangeAllocations.",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "_definitions.json#/definitions/io.openshift.internal.security.v1.RangeAllocation"
+        "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.security.v1.RangeAllocation"
       }
     },
     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
       "type": [
         "string",
         "null"
@@ -35,13 +35,13 @@
       ]
     },
     "metadata": {
-      "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
+      "description": "More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata",
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
     }
   },
   "x-kubernetes-group-version-kind": [
     {
-      "group": "security.internal.openshift.io",
+      "group": "security.openshift.io",
       "kind": "RangeAllocationList",
       "version": "v1"
     }

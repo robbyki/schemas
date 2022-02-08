@@ -1,6 +1,5 @@
 {
   "description": "ReplicaSetStatus represents the current status of a ReplicaSet.",
-  "type": "object",
   "required": [
     "replicas"
   ],
@@ -20,7 +19,7 @@
         "null"
       ],
       "items": {
-        "$ref": "_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetCondition"
+        "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetCondition"
       },
       "x-kubernetes-patch-merge-key": "type",
       "x-kubernetes-patch-strategy": "merge"
@@ -58,5 +57,6 @@
       "format": "int32"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

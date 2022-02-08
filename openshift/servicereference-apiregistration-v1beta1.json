@@ -1,6 +1,5 @@
 {
   "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
-  "type": "object",
   "properties": {
     "name": {
       "description": "Name is the name of the service",
@@ -15,15 +14,8 @@
         "string",
         "null"
       ]
-    },
-    "port": {
-      "description": "If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).",
-      "type": [
-        "integer",
-        "null"
-      ],
-      "format": "int32"
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

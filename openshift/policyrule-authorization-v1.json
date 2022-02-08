@@ -1,8 +1,8 @@
 {
   "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
-  "type": "object",
   "required": [
     "verbs",
+    "apiGroups",
     "resources"
   ],
   "properties": {
@@ -21,7 +21,7 @@
     },
     "attributeRestrictions": {
       "description": "AttributeRestrictions will vary depending on what the Authorizer/AuthorizationAttributeBuilder pair supports. If the Authorizer does not recognize how to handle the AttributeRestrictions, the Authorizer should report an error.",
-      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.runtime.RawExtension"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.runtime.RawExtension"
     },
     "nonResourceURLs": {
       "description": "NonResourceURLsSlice is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path This name is intentionally different than the internal type so that the DefaultConvert works nicely and because the ordering may be different.",
@@ -76,5 +76,6 @@
       }
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

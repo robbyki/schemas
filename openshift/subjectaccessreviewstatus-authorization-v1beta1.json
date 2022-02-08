@@ -1,6 +1,5 @@
 {
   "description": "SubjectAccessReviewStatus",
-  "type": "object",
   "required": [
     "allowed"
   ],
@@ -34,5 +33,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

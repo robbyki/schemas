@@ -1,6 +1,5 @@
 {
   "description": "SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
-  "type": "object",
   "properties": {
     "extra": {
       "description": "Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.",
@@ -36,11 +35,11 @@
     },
     "nonResourceAttributes": {
       "description": "NonResourceAttributes describes information for a non-resource access request",
-      "$ref": "_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes"
     },
     "resourceAttributes": {
       "description": "ResourceAuthorizationAttributes describes information for a resource access request",
-      "$ref": "_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceAttributes"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceAttributes"
     },
     "uid": {
       "description": "UID information about the requesting user.",
@@ -57,5 +56,6 @@
       ]
     }
   },
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }

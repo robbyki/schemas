@@ -1,12 +1,11 @@
 {
   "description": "SubjectRulesReview is a resource you can create to determine which actions another user can perform in a namespace",
-  "type": "object",
   "required": [
     "spec"
   ],
   "properties": {
     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
       "type": [
         "string",
         "null"
@@ -17,7 +16,7 @@
       ]
     },
     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
       "type": [
         "string",
         "null"
@@ -28,11 +27,11 @@
     },
     "spec": {
       "description": "Spec adds information about how to conduct the check",
-      "$ref": "_definitions.json#/definitions/com.github.openshift.api.authorization.v1.SubjectRulesReviewSpec"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.authorization.v1.SubjectRulesReviewSpec"
     },
     "status": {
       "description": "Status is completed by the server to tell which permissions you have",
-      "$ref": "_definitions.json#/definitions/com.github.openshift.api.authorization.v1.SubjectRulesReviewStatus"
+      "$ref": "https://raw.githubusercontent.com/garethr/openshift-json-schema/master/master/_definitions.json#/definitions/com.github.openshift.api.authorization.v1.SubjectRulesReviewStatus"
     }
   },
   "x-kubernetes-group-version-kind": [
@@ -47,5 +46,6 @@
       "version": "v1"
     }
   ],
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object"
 }
